@@ -3,7 +3,7 @@ const report = require('multiple-cucumber-html-reporter');
 report.generate({
     jsonDir: './test/report/',
     reportPath: './test/report/',
-    openReportInBrowser: true,
+    openReportInBrowser: false,
     metadata:{
         browser: {
             name: 'chrome',

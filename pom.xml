@@ -48,6 +48,7 @@
       <groupId>info.cukes</groupId>
       <artifactId>cucumber-junit</artifactId>
       <version>1.2.5</version>
+      <scope>compile</scope>
     </dependency>
 
     <dependency>
@@ -60,17 +61,6 @@
       <groupId>com.aventstack</groupId>
       <artifactId>extentreports</artifactId>
       <version>3.1.1</version>
-    </dependency>
-     <dependency>
-          <groupId>junit</groupId>
-          <artifactId>junit</artifactId>
-          <version>4.13</version>
-      </dependency>
-    <dependency>
-      <groupId>info.cukes</groupId>
-      <artifactId>cucumber-junit</artifactId>
-      <version>1.2.5</version>
-      <scope>compile</scope>
     </dependency>
 
   </dependencies>
@@ -119,5 +109,15 @@
         </plugin>
       </plugins>
     </pluginManagement>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <configuration>
+          <source>8</source>
+          <target>8</target>
+        </configuration>
+      </plugin>
+    </plugins>
   </build>
 </project>
