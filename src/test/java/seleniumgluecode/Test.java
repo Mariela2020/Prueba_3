@@ -120,6 +120,7 @@ public class Test extends TestBase{
     @Then("^Se debe redireccionar a la página Detalle del contrato$")
     public void seDebeRedireccionarALaPáginaDetalleDelContrato() throws Exception {
         Assert.assertTrue(detalleContratoPage.istitledetalleDisplayed());
+        detalleContratoPage.WriteExcelFile();
         detalleContratoPage.ClickOnbtnPagar();
     }
 
