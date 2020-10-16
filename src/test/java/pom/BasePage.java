@@ -132,7 +132,7 @@ public class BasePage {
         for (int i=0; i<= rowCount; i++){
             XSSFRow row = newSheet.getRow(i);
             for (int f=0; f< row.getLastCellNum(); f++){
-                System.out.println(row.getCell(f).getStringCellValue() + "||");
+               // System.out.println(row.getCell(f).getStringCellValue() + "||");
             }
         }
 
@@ -179,10 +179,10 @@ public class BasePage {
         XSSFSheet newSheet = newWorkbook.getSheet(sheetName);
         XSSFRow row = newSheet.getRow(rowNumber);
         XSSFCell firstCell = row.getCell(cellNumber-1);
-        System.out.println("El valor de la primera celda es." + firstCell.getStringCellValue());
+        //System.out.println("El valor de la primera celda es." + firstCell.getStringCellValue());
         XSSFCell nextCell = row.createCell(cellNumber);
         nextCell.setCellValue(resultText);
-        System.out.println("El valor de la Siguiente celda es:" + nextCell.getStringCellValue());
+       // System.out.println("El valor de la Siguiente celda es:" + nextCell.getStringCellValue());
         inputStream.close();
         FileOutputStream outputStream = new FileOutputStream(file);
         newWorkbook.write(outputStream);

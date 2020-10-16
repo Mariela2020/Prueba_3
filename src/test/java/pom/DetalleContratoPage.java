@@ -27,10 +27,10 @@ public class DetalleContratoPage extends BasePage {
     }
 
     public void WriteExcelFile() throws Exception {
-        String filepath = "C:\\Users\\mhurtado\\Documents\\Herramientas QA\\Proyecto Idea\\src\\test\\resources\\filepath\\Test.xlsx";
+        String filepath = "src/test/resources/filepath/Test.xlsx";
         String date = getDate();
         String resultText= getText(resultotaltext);
-        System.out.println("El valor total es:" + resultText);
+        //System.out.println("El valor total es:" + resultText);
         readExcel(filepath, "Hoja1");
         writeExcel(filepath,"Hoja1", resultText + " " + date);
         readExcel(filepath,"Hoja1");
